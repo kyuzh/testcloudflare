@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon premier projet Cloudflare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f0f0f0;
+    }
+    h1 {
+      color: #1e90ff;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0f6fcf;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur Cloudflare Pages !</h1>
+  <p>Clique sur le bouton pour un message magique :</p>
+  <button onclick="showMessage()">Clique ici</button>
+  <p id="message"></p>
+
+  <script>
+    function showMessage() {
+      const messages = [
+        "🎉 Tu as réussi ton premier déploiement !",
+        "🚀 Cloudflare c'est rapide !",
+        "✨ Les Pages Functions sont puissantes !",
+        "💡 Continue à explorer !"
+      ];
+      const random = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById('message').textContent = random;
+    }
+  </script>
+</body>
+</html>
